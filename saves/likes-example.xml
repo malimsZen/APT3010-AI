@@ -1,0 +1,110 @@
+<!-- Example Database -->
+<EXAMPLES>
+
+<DESCRIPTION>
+	<SHORT>This predicts whether a person likes a TV program based on features of the TV program.</SHORT>
+	<DETAILED>This is data about what TV programs a person likes. Each show is characterized by whether it is a comedy, whether it features doctors, whether it features lawyers, and whether it has guns. The aim is to predict whether the person likes a TV show based on these features.</DETAILED>
+</DESCRIPTION>
+
+   <!-- Parameter Definition -->
+   <PARAMETER type=input>Comedy</PARAMETER>
+   <PARAMETER type=input>Doctors</PARAMETER>
+   <PARAMETER type=input>Lawyers</PARAMETER>
+   <PARAMETER type=input>Guns</PARAMETER>
+   <PARAMETER type=output>Likes</PARAMETER>
+
+   <!-- Examples -->
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">false</VALUE>
+      <VALUE parameter="Doctors">true</VALUE>
+      <VALUE parameter="Lawyers">false</VALUE>
+      <VALUE parameter="Guns">false</VALUE>
+      <VALUE parameter="Likes">false</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">true</VALUE>
+      <VALUE parameter="Doctors">false</VALUE>
+      <VALUE parameter="Lawyers">true</VALUE>
+      <VALUE parameter="Guns">false</VALUE>
+      <VALUE parameter="Likes">true</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">false</VALUE>
+      <VALUE parameter="Doctors">false</VALUE>
+      <VALUE parameter="Lawyers">true</VALUE>
+      <VALUE parameter="Guns">true</VALUE>
+      <VALUE parameter="Likes">true</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">false</VALUE>
+      <VALUE parameter="Doctors">false</VALUE>
+      <VALUE parameter="Lawyers">true</VALUE>
+      <VALUE parameter="Guns">false</VALUE>
+      <VALUE parameter="Likes">false</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">false</VALUE>
+      <VALUE parameter="Doctors">false</VALUE>
+      <VALUE parameter="Lawyers">false</VALUE>
+      <VALUE parameter="Guns">true</VALUE>
+      <VALUE parameter="Likes">false</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">true</VALUE>
+      <VALUE parameter="Doctors">false</VALUE>
+      <VALUE parameter="Lawyers">false</VALUE>
+      <VALUE parameter="Guns">true</VALUE>
+      <VALUE parameter="Likes">false</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">true</VALUE>
+      <VALUE parameter="Doctors">false</VALUE>
+      <VALUE parameter="Lawyers">false</VALUE>
+      <VALUE parameter="Guns">false</VALUE>
+      <VALUE parameter="Likes">true</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">false</VALUE>
+      <VALUE parameter="Doctors">true</VALUE>
+      <VALUE parameter="Lawyers">true</VALUE>
+      <VALUE parameter="Guns">true</VALUE>
+      <VALUE parameter="Likes">true</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">false</VALUE>
+      <VALUE parameter="Doctors">true</VALUE>
+      <VALUE parameter="Lawyers">true</VALUE>
+      <VALUE parameter="Guns">false</VALUE>
+      <VALUE parameter="Likes">false</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">true</VALUE>
+      <VALUE parameter="Doctors">true</VALUE>
+      <VALUE parameter="Lawyers">true</VALUE>
+      <VALUE parameter="Guns">false</VALUE>
+      <VALUE parameter="Likes">true</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">true</VALUE>
+      <VALUE parameter="Doctors">true</VALUE>
+      <VALUE parameter="Lawyers">false</VALUE>
+      <VALUE parameter="Guns">true</VALUE>
+      <VALUE parameter="Likes">false</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">false</VALUE>
+      <VALUE parameter="Doctors">false</VALUE>
+      <VALUE parameter="Lawyers">false</VALUE>
+      <VALUE parameter="Guns">false</VALUE>
+      <VALUE parameter="Likes">false</VALUE>
+   </EXAMPLE>
+   <EXAMPLE type=training>
+      <VALUE parameter="Comedy">true</VALUE>
+      <VALUE parameter="Doctors">true</VALUE>
+      <VALUE parameter="Lawyers">false</VALUE>
+      <VALUE parameter="Guns">false</VALUE>
+      <VALUE parameter="Likes">true</VALUE>
+   </EXAMPLE>
+</EXAMPLES>
+
+

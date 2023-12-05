@@ -1,0 +1,276 @@
+<!-- Example Database -->
+<EXAMPLES>
+
+	<DESCRIPTION>
+		<SHORT>This gives data that predicts whether a person likes a holiday.</SHORT>
+		<DETAILED>This data set is used to predict whether a person likes a holiday as a function of whether there is culture, whether the person has to fly, whether the destination is hot, whether there is music, and whether there is nature. In this data set, the value 1 means true and 0 means false.</DETAILED>
+	</DESCRIPTION>
+
+	<!-- Parameter Definition -->
+	<PARAMETER type=input>Culture</PARAMETER>
+	<PARAMETER type=input>Fly</PARAMETER>
+	<PARAMETER type=input>Hot</PARAMETER>
+	<PARAMETER type=input>Music</PARAMETER>
+	<PARAMETER type=input>Nature</PARAMETER>
+	<PARAMETER type=output>Likes</PARAMETER>
+
+	<!-- Examples -->
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">1</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">0</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">1</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">0</VALUE>
+		<VALUE parameter="Nature">1</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="Culture">0</VALUE>
+		<VALUE parameter="Fly">1</VALUE>
+		<VALUE parameter="Hot">0</VALUE>
+		<VALUE parameter="Music">1</VALUE>
+		<VALUE parameter="Nature">0</VALUE>
+		<VALUE parameter="Likes">1</VALUE>
+	</EXAMPLE>
+</EXAMPLES>
+
+

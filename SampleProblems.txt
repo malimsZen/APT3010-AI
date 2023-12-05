@@ -1,0 +1,10 @@
+Mail Reading, MailReadingUnlearned.txt, This example models whether a user will read or not read an article based on whether or not the author is known, if its a new thread, the length, and where the user is.
+Mail Reading (simplified), MailReadingUnlearned2.txt, Same as the "Mail Reading" example except that there is no input "Where Read". 
+Boolean Example, booleanUnlearned.txt, This is a simple example modeling the XOR logical operation.
+Classification of Animals, zoo.txt, This example classifies animals based on characteristics such as number of legs, whether or not it has hair, whether or not it has teeth.
+Electronics, AllElectronics.txt, This example models whether a user will buy a piece of electronics based on the user's age, income, if they are a student and their credit rating.
+Small Car Database, CarExample.txt, This example models whether a car is acceptable or not to a user based on the price, maintenance cost, how many doors, how many people it can hold, trunk size and the safety rating.
+Large Car Database, Car.txt, Same as "Small Car" Database except that there are more training examples. This file is large so may take some time to load.
+Matching Pennies, matchingPennies.xml, This is data for predicting wins by observing some properties in game of matching pennies.
+Likes TV, likes-example.xml, This predicts whether a person likes a TV program based on features of the TV program.
+Holiday, holiday.xml, This gives data that predicts whether a person likes a holiday.

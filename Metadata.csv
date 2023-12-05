@@ -1,0 +1,2 @@
+version,device name,recording epoch time,recording time,recording timezone,platform,appVersion,device id,sensors,sampleRateMs
+3,SM-N986B,1700810754632,2023-11-24_07-25-54,Africa/Nairobi,android,1.26.0,900fcc2f-ed68-4c0c-af8f-94b07d939745,Accelerometer|Annotation|TotalAcceleration|AccelerometerUncalibrated,10||10|10

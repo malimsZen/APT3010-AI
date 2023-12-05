@@ -1,0 +1,660 @@
+<!-- Example Database -->
+<EXAMPLES>
+
+	<DESCRIPTION>
+		<SHORT>This is data for predicting wins by observing some properties in game of matching pennies.</SHORT>
+		<DETAILED>The following properties are observed: whether the right hand was used to toss the coins, whether the coins landed heads heads, whether there is cheering, whether the better touched their face, and whether there is a win.</DETAILED>
+	</DESCRIPTION>
+
+	<!-- Parameter Definition -->
+	<PARAMETER type=input>RightHand</PARAMETER>
+	<PARAMETER type=input>Heads1</PARAMETER>
+	<PARAMETER type=input>Heads2</PARAMETER>
+	<PARAMETER type=input>Cheer</PARAMETER>
+	<PARAMETER type=input>TouchFace</PARAMETER>
+	<PARAMETER type=output>Win</PARAMETER>
+
+	<!-- Examples -->
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">1</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">1</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">0</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">0</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">1</VALUE>
+		<VALUE parameter="TouchFace">0</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+	<EXAMPLE type=training>
+		<VALUE parameter="RightHand">1</VALUE>
+		<VALUE parameter="Heads1">0</VALUE>
+		<VALUE parameter="Heads2">0</VALUE>
+		<VALUE parameter="Cheer">0</VALUE>
+		<VALUE parameter="TouchFace">1</VALUE>
+		<VALUE parameter="Win">1</VALUE>
+	</EXAMPLE>
+</EXAMPLES>
+
+
