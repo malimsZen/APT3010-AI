@@ -12,6 +12,7 @@ from learnProblem import Evaluate
 import math, random, collections, statistics
 import utilities  # argmax for (element,value) pairs
 
+
 class Predict(object):
     """The class of prediction methods for a list of values.
     Please make the doc strings the same length, because they are used in tables.
